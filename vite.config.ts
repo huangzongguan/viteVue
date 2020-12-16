@@ -7,5 +7,14 @@ module.exports = {
   optimizeDeps: {
     include: ['lodash']
   },
-  proxy: {}
+  proxy: {
+    // string shorthand
+    '/api': 'http://localhost:5000',
+    // with options
+    // '/api': {
+    //   target: 'http://jsonplaceholder.typicode.com',
+    //   changeOrigin: true,
+    //   rewrite: (path: string) => path.replace(/^\/api/, '')
+    // }
+  }
 }
